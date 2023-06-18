@@ -1,7 +1,7 @@
 import React from 'react';
 import Def from './default';
 
-const HomeLogin = () => {
+function HomeLogin () {
   return (
     <Def>
        <main
