@@ -12,10 +12,6 @@ function Def (html) {
             <body>
 
              {html.children}
-
-             <footer>
-                <p>&copy; 2023 Book Review</p>
-            </footer>
             
             </body>
 
