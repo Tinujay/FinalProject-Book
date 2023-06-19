@@ -4,9 +4,18 @@ const Def = require('../default')
 function newBookReview () {
     return (
         <Def>
-            <main style={{backgroundImage: "url(/images/newbookreview.jpg)", width: "100vw", backgroundSize: "cover", backgroundPosition: "center"}}>
-            <h1 className="new-review-title">Add Your Book Review Here!</h1>
+            <nav className="navbar">
+                <ul className="navbar-list">
+                    <li className="navbar-item">My Bookshelf</li>
+                    <li className="navbar-item">TBR</li>
+                    <li className="navbar-item">Add Book</li>
+                </ul>
+            </nav>
+
+            <main style={{backgroundImage: "url(/images/addbook.jpg)", width: "100vw", backgroundRepeat: "repeat"}}>
+            
                 <form className="review-form">
+                <h1 className="new-review-title">Expand Your Bookshelf !</h1>
                     <div>
                         <label htmlFor="book-title">Title:</label>
                         <input type="text" id="book-title" />
@@ -28,23 +37,20 @@ function newBookReview () {
                         <textarea id="book-plot" rows="5"></textarea>
                     </div>
                     <div>
-                        <label htmlFor="book-review">Review:</label>
-                        <textarea id="book-review" rows="5"></textarea>
-                    </div>
-                    <div>
-                        <label htmlFor="book-rating">Rating:</label>
-                        <select id="book-rating">
-                            <option value="">Select Rating</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label htmlFor="book-status">Status:</label>
+                        <select id="book-status">
+                            <option value="">Select Status</option>
+                            <option value="currently-reading">Currently Reading</option>
+                            <option value="read">Read</option>
+                            <option value="tbr">TBR (To Be Read)</option>
                         </select>
                     </div>
-                    <button type="submit">Submit Review</button>
+                    <div class="button-container">
+                        <button type="submit" class="submit-button">Add Book!</button>
+                    </div>
                 </form>
             </main>
+
         </Def>
     )
 }
