@@ -18,21 +18,26 @@ router.get('/', (req, res) => {
 //POST - creates new database form into books collection which then navigated to '/books' (your profile page)
 router.post('/', (req, res) => {
     db.Book.create({
-        title: req.body.title,
-        author: req.body.author,
-        image: req.body.image,
-        genre: req.body.genre,
-        plot: req.body.plot,
-        status: req.body.status
-      })
-      .then(() => {
-        res.redirect('/books');
+      title: req.body.title,
+      author: req.body.author,
+      image: req.body.image,
+      genre: req.body.genre,
+      plot: req.body.plot,
+      status: req.body.status
+    })
+      .then((book) => {
+        if (book.status === 'TBR') {
+          res.redirect('/books/tbr');
+        } else {
+          res.redirect('/books');
+        }
       })
       .catch((err) => {
         console.log(err);
         res.render('error404');
       });
-    }); 
+  });
+  
 
 
 // GET - renders the TBR (To Be Read) page

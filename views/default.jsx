@@ -7,6 +7,8 @@ function Def (html) {
             <head>
                 <title>BookReview</title>
                 <link rel="stylesheet" href="/css/style.css"/>
+            
+
             </head>
 
             <body>

@@ -95,8 +95,6 @@ body{
   background-color: #bbb;
 }
 
-
-
 /*add new book form */
 .form-container {
   background-color: rgba(251, 250, 250, 0.8); 
@@ -134,3 +132,118 @@ body{
   color: #fff; /* Change to your desired hover text color */
 }
 
+
+/*TBR List */
+.tbr-title {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.tbr-list {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: rgba(193, 193, 193, 0.7);
+  padding: 10px;
+}
+
+.tbr-list > div {
+  flex: 0 0 250px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  margin-right: 10px;
+  text-align: center;
+}
+
+.tbr-list h2 {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.tbr-list p {
+  font-size: 14px;
+  color: rgb(3, 3, 3);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.tbr-list img {
+  width: 110px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+/*profile */
+.profile-section-title {
+  font-size: 25px;
+  color: #000000;
+  margin-bottom: 10px;
+  background-color: rgb(255, 249, 249);
+  padding: 10px 200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.shelf-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookshelf-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-card {
+  width: 200px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-card img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+ 
+}
+
+.book-card h3 {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: -5px;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 5px;
+}
