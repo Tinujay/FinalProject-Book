@@ -12,7 +12,7 @@ const bookSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        default: 'images/defaultpict.jpg',
+        default: 'images/defaultbookjpg',
       },
     genre: {
         type: String,
@@ -23,6 +23,7 @@ const bookSchema = new mongoose.Schema({
     status: {
         type: String,
         enum: ['Currently Reading', 'Read', 'TBR'],
+        required: true,
     }
 });
 
