@@ -54,10 +54,56 @@ router.get('/tbr', (req, res) => {
 
 
 
+// GET request for a specific book detail
+router.get('/:id', (req, res) => {
+    const bookId = req.params.id;
+  
+    db.Book.findById(bookId)
+      .then((book) => {
+        if (!book) {
+          // If the book is not found, you can handle it accordingly
+          return res.status(404).render('error404');
+        }
+  
+        // Render the 'readingdiary/bookDetails' view with the retrieved book data
+        res.render('readingdiary/bookDetails', { book });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.render('error404');
+      });
+  });
+
+
+
 //GET - new movie (form) route
 router.get('/new', (req, res) => {
     res.render('readingdiary/new')
 })
 
+
+//GET - edit page (form) to that particular book
+router.get('/:id/edit', (req, res) => {
+    db.Book.findById(req.params.id)
+        .then(book => {
+            res.render('readingdiary/edit', { book})
+        })
+        .catch(err => {
+            res.render('error404')
+        })
+  })
+
+
+//PUT - saves changes in database and redirects to book detail page
+router.put('/:id', (req, res) => {
+    const { title, author, image, genre, plot, status } = req.body;
+    db.Book.findByIdAndUpdate(req.params.id, { title, author, image, genre, plot, status })
+      .then(() => res.redirect(`/books/${req.params.id}`))
+      .catch(err => {
+        console.log(err);
+        res.render('error404');
+      });
+  });
+  
 
 module.exports = router

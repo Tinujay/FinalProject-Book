@@ -27,7 +27,10 @@ function TBR(props) {
                 <div key={book._id}>
                     <h2>{book.title}</h2>
                     <p>By: {book.author}</p>
-                    <img src={book.image} alt={book.title} />
+                    <img
+                        src={book.image || '/images/defaultbook.jpg'}
+                        alt={book.title}
+                    />
                     <p>Status: {book.status}</p>
                 </div>
             ))}
