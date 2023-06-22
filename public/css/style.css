@@ -1,21 +1,29 @@
 body{
-    background-color: rgb(235, 226, 127);
+    background-color: rgb(136, 204, 142);
 }
 
 
 .title {
-    background-color:rgb(246, 246, 179);
+    background-color:rgb(156, 184, 153);
     padding: 0.5px;
+    border: 1px solid black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2),
+              0 4px 12px rgba(0, 0, 0, 0.15);
 } 
 
 .login-title {
     text-align: center;
     color: rgb(0, 0, 0);
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 50px;
 }
   
 .login-subtitle {
     text-align: center;
     color: rgb(7, 7, 7);
+    font-family: 'Alice', serif;
+    font-size: smaller;
+    margin: 30px;
 }
 
 .login-signup-section {

@@ -6,16 +6,16 @@ function HomeLogin () {
     <Def>
        <main
             style={{
-                background: "url(/images/Bookshelf-cat.jpg)",
+                background: "url(/images/login.jpg)",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
-                minHeight: "90vh",
+                height: "120vh",
                 minWidth: "90vw",    
             }}           
         >
       
         <div className="title">
-            <h1 className="login-title">Reading Diary</h1>
+            <h1 className="login-title">Reading Diary 📕 </h1>
             <p className="login-subtitle">Welcome! Login or Sign Up to log your books, write reviews and keep track of your reading journey. </p>
         </div>
 
