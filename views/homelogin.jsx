@@ -36,6 +36,8 @@ function HomeLogin () {
                     </form>
                 </div>
 
+                <br></br>
+
                 <div className="signup-container">
                     <form>
                         <h3>Sign Up</h3>

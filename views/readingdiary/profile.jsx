@@ -1,3 +1,4 @@
+const { constrainedMemory } = require('process');
 const React = require('react');
 const Def = require('../default');
 
@@ -9,6 +10,15 @@ function Profile(props) {
 
   return (
     <Def>
+      <main className="profile-page" 
+        style={{
+            backgroundImage: "url(/images/profile.jpg)", 
+            width: "100%", 
+            height: "100%",
+            backgroundRepeat: "repeat",
+            backgroundSize: "contain",
+          }}>
+
       <nav className="navbar">
         <ul className="navbar-list">
           <li className="navbar-item">
@@ -22,8 +32,6 @@ function Profile(props) {
           </li>
         </ul>
       </nav>
-
-      <main className="profile-page" style={{backgroundImage: "url(/images/profile.jpg)", width: "100vw", backgroundRepeat: "repeat"}}>
 
         <div className="bookshelf">
 
