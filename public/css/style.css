@@ -77,48 +77,42 @@ body{
 
 /*navbar*/
 .navbar {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(173, 222, 173, 0.7);
   display: flex;
-  margin-bottom: 20px;
   justify-content: flex-start;
   border: 1px solid black;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 .navbar-item a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
-
-
 
 .navbar-list {
   list-style-type: none;
   display: flex;
   gap: 20px;
-  margin: 4px;
-  padding: 4px;
-  
+  margin: 0px;
+  padding: 0px;
 }
 
 .navbar-item {
-  font-weight: bold;
   font-size: 18px;
   padding: 10px;
- 
-  background-color: #4f4f4f;
   transition: background-color 0.3s ease;
-  border: 1px solid black;
 }
 
 .navbar-item:hover {
-  background-color: rgb(68, 106, 77);
+  background-color: rgb(188, 219, 182);
 }
+
+
 
 /*add new book form */
 .form-container {
   background-color: rgba(251, 250, 250, 0.8); 
-  width: 500px; /* Adjust the width as desired */
+  width: 500px; 
   margin: 0 auto; /* Center the form horizontally */
   padding: 30px;
   border-radius: 10px;
@@ -207,11 +201,11 @@ body{
 .profile-section-title {
   font-size: 25px;
   color: #000000;
-  margin-bottom: 10px;
-  background-color: rgb(255, 249, 249);
-  padding: 10px 200px;
-  width: 100%;
-  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: rgb(117, 151, 118);
+  padding: 10px 150px;
+  margin-bottom: 0;
+  border: 1px solid black;
 }
 
 .bookshelf {
@@ -219,7 +213,6 @@ body{
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-top: 20px;
 }
 
 .shelf-section {
@@ -227,18 +220,24 @@ body{
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  overflow-x: auto;
 }
 
 .bookshelf-books {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  justify-content: flex-start;
   gap: 20px;
+  padding: 20px;
+  background-color: rgba(211, 211, 211, 0.8);
+  margin-bottom: 10px;
+ 
 }
 
 .book-card {
   width: 200px;
-  padding: 10px;
+  padding: 20px;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
@@ -250,11 +249,10 @@ body{
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 .book-card:hover {
-  background-color: rgba(241, 245, 143);
+  background-color: rgb(152, 188, 153);
   transition: background-color 0.2s ease;
 }
 
@@ -262,8 +260,7 @@ a {
   width: 100px;
   height: 150px;
   object-fit: cover;
-  border-radius: 5px;
- 
+  border-radius: 3px;
 }
 
 .book-card h3 {

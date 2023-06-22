@@ -15,6 +15,12 @@ router.get('/', (req, res) => {
   })
 
 
+//GET - new movie (form) route
+router.get('/new', (req, res) => {
+    res.render('readingdiary/new')
+})
+
+
 //POST - creates new database form into books collection which then navigated to '/books' (your profile page)
 router.post('/', (req, res) => {
     db.Book.create({
@@ -37,7 +43,8 @@ router.post('/', (req, res) => {
         res.render('error404');
       });
   });
-  
+
+
 
 
 // GET - renders the TBR (To Be Read) page
@@ -76,10 +83,7 @@ router.get('/:id', (req, res) => {
 
 
 
-//GET - new movie (form) route
-router.get('/new', (req, res) => {
-    res.render('readingdiary/new')
-})
+
 
 
 //GET - edit page (form) to that particular book

@@ -22,13 +22,13 @@ function Profile(props) {
       <nav className="navbar">
         <ul className="navbar-list">
           <li className="navbar-item">
-            <a href="/books">My Bookshelf</a>
+            <a href="/books">My Bookshelf 📚</a>
           </li>
           <li className="navbar-item">
-            <a href="/books/new">Add New Book</a>
+            <a href="/books/new">Add New Book 🌱</a>
           </li>
           <li className="navbar-item">
-            <a href="/books/tbr">My TBR</a>
+            <a href="/books/tbr">My TBR 🌻</a>
           </li>
         </ul>
       </nav>
@@ -46,7 +46,6 @@ function Profile(props) {
                     src={book.image || '/images/defaultbook.jpg'}
                     alt={book.title}
                   />
-                  <p>Status: {book.status}</p>
                 </a>
               ))}
             </div>
@@ -63,7 +62,6 @@ function Profile(props) {
                     src={book.image || '/images/defaultbook.jpg'}
                     alt={book.title}
                   />
-                  <p>Status: {book.status}</p>
                 </a>
               ))}
             </div>
