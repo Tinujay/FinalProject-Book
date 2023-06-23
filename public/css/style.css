@@ -247,7 +247,7 @@ body{
 
 .book-card {
   width: 200px;
-  padding: 20px;
+  padding: 15px;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
@@ -276,38 +276,47 @@ a {
 .book-card h3 {
   font-size: 18px;
   color: #000000;
-  margin-bottom: -5px;
+  margin-bottom: -8px;
+  margin-top: 5px;
 }
 
 .book-card p {
   font-size: 14px;
   color: #333333;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 
 
 
-/*book deatils */
+/*book details */
+.details-page {
+  background-color: #f0f0f0;
+}
+
 .book-details {
   text-align: center;
-  padding: 20px;
+  padding: 60px;
 }
 
 .title {
   font-size: 24px;
   margin-bottom: 10px;
+  padding: 5px;
+  background-color: aliceblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .book-info {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .image-container {
   margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .image-container img {
@@ -325,15 +334,12 @@ a {
 }
 
 .genre, .plot {
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 10px;
 }
 
-.status {
-  font-size: 14px;
-}
-
-.edit-button {
+.edit-button,
+.review-button {
   background-color: #7a7a7a;
   color: #fff;
   padding: 5px;
@@ -341,13 +347,16 @@ a {
   text-decoration: none;
 }
 
-.edit-button:hover {
+.review-button {
+  margin-top: 50px;
+}
+
+.edit-button:hover,
+.review-button:hover {
   background-color: #0056b3;
 }
 
-h1 {
-  text-align: center;
-}
+
 
 
 

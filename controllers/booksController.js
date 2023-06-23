@@ -83,6 +83,7 @@ router.get('/:id', (req, res) => {
 
 
 
+  
 
 
 
@@ -96,6 +97,13 @@ router.get('/:id/edit', (req, res) => {
             res.render('error404')
         })
   })
+
+  
+//GET - movie-review (form) route
+router.get('/:id/review', (req, res) => {
+    res.render('readingdiary/review')
+})
+  
 
 
 //PUT - saves changes in database and redirects to book detail page
