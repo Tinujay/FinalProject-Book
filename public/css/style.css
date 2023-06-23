@@ -137,12 +137,12 @@ body{
 
 .form-container button {
   width: 100%;
-  background-color: #9c3939;
+  background-color: #73a37e;
   font-size: 20px;
 }
 
 .form-container button:hover {
-  background-color: #447654; /* Change to your desired hover color */
+  background-color: #bc7462; /* Change to your desired hover color */
   color: #fff; /* Change to your desired hover text color */
 }
 
@@ -150,11 +150,13 @@ body{
 /*TBR List */
 .tbr-title {
   text-align: center;
-  font-size: 50px;
-  color: rgb(255, 255, 255);
+  font-size: 40px;
+  color: rgb(0, 0, 0);
   margin-bottom: 20px;
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 90px;
+  padding: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: rgba(190, 190, 190, 0.8);
 }
 
 .tbr-list {
@@ -196,13 +198,21 @@ body{
   border-radius: 5px;
 }
 
+.tbr-book {
+  transition: background-color 0.3s ease;
+}
+
+.tbr-book:hover {
+  background-color: #c0d9b5; 
+}
+
 
 /*profile */
 .profile-section-title {
   font-size: 25px;
   color: #000000;
   font-family: 'Bebas Neue', sans-serif;
-  background-color: rgb(117, 151, 118);
+  background-color: rgba(190, 190, 190, 0.8);
   padding: 10px 150px;
   margin-bottom: 0;
   border: 1px solid black;

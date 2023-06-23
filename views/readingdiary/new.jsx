@@ -5,37 +5,38 @@ function newBook () {
     return (
         <Def>
             
-
             <main style={{
-                backgroundImage: "url(/images/addbook.jpg)", 
-                width: "100vw", 
-                backgroundRepeat: "repeat"
+                backgroundImage: "url(/images/addbook1.jpg)", 
+                width: "100%", 
+                height: "100%",
+                backgroundRepeat: "repeat",
+                backgroundSize: "contain",
             }}>
             
-            <nav className="navbar">
-                <ul className="navbar-list">
-                    <li className="navbar-item">
-                        <a href="/books">My Bookshelf</a>
-                    </li>
-                    <li className="navbar-item">
-                        <a href="/books/new">Add New Book</a>
-                    </li>
-                    <li className="navbar-item">
-                        <a href="/books/tbr">My TBR</a>
-                    </li>
-                </ul>
-            </nav>
+                <nav className="navbar">
+                    <ul className="navbar-list">
+                        <li className="navbar-item">
+                            <a href="/books">My Bookshelf 📚</a>
+                        </li>
+                        <li className="navbar-item">
+                            <a href="/books/new">Add New Book 🌱</a>
+                        </li>
+                        <li className="navbar-item">
+                            <a href="/books/tbr">My TBR 🌻</a>
+                        </li>
+                    </ul>
+                </nav>
 
             <br></br>
 
                 <form className="form-container" method="POST" action="/books">
                     <div className="form-group">
                         <label htmlFor="title">Book Title:</label>
-                        <input className="form-control" id="title" name="title"/>
+                        <input className="form-control" id="title" name="title" required/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="author">Author:</label>
-                        <input className="form-control" id="author" name="author"/>
+                        <input className="form-control" id="author" name="author" required/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="image">Book Cover Image:</label>
@@ -61,6 +62,8 @@ function newBook () {
                     </div>
                     <button className="btn btn-primary" type="submit">Add Book</button>
                 </form>
+
+            <br></br>
 
             </main>
 
