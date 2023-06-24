@@ -57,8 +57,8 @@ function BookDetails(props) {
                   <li key={review._id} className="review-item">
                     <p>Rating: {review.rating}</p>
                     <p>Thoughts: {review.thoughts}</p>
-                    <p>Start Date: {review.startDate.toString()}</p>
-                    <p>End Date: {review.endDate.toString()}</p>
+                    <p>Start Date: {review.startDate.toLocaleDateString()}</p>
+                    <p>End Date: {review.endDate.toLocaleDateString()}</p>
                     <p>Favorite Quotes: {review.favoriteQuotes.join(', ')}</p>
                     {review.bookBoardImage && (
                       <img src={review.bookBoardImage} alt="Book Board" />
