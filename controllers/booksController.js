@@ -66,6 +66,7 @@ router.get('/:id', (req, res) => {
     const bookId = req.params.id;
   
     db.Book.findById(bookId)
+    .populate('reviews')
       .then((book) => {
         if (!book) {
           // If the book is not found, you can handle it accordingly
@@ -83,9 +84,6 @@ router.get('/:id', (req, res) => {
 
 
 
-  
-
-
 
 //GET - edit page (form) to that particular book
 router.get('/:id/edit', (req, res) => {
@@ -98,12 +96,39 @@ router.get('/:id/edit', (req, res) => {
         })
   })
 
-  
+
+
 //GET - movie-review (form) route
 router.get('/:id/review', (req, res) => {
-    res.render('readingdiary/review')
+    const bookId = req.params.id;
+    res.render('readingdiary/review', { bookId });
 })
   
+
+// POST - create a review for a specific book
+router.post('/:id', (req, res) => {
+    const bookId = req.params.id;
+
+  db.Book.findById(bookId) 
+  .then(book => {
+    if (!book) {
+        // If the book is not found, handle the error
+        return res.status(404).render('error404');
+      }
+
+    db.Review.create(req.body)
+        .then((review) => {
+            book.reviews.push(review.id)
+            book.save().then(() => {
+            res.redirect(`/books/${bookId}`);
+        })
+    })
+  })
+    .catch((error) => {
+    console.log(error);
+    res.render('error404');
+    });
+});
 
 
 //PUT - saves changes in database and redirects to book detail page

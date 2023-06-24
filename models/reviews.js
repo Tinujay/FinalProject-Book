@@ -18,10 +18,6 @@ const reviewSchema = new mongoose.Schema({
     max: 5,
     required: true,
   },
-  mood: {
-    type: [String],
-    enum: ['Happy', 'Sad', 'Spicy', 'Sad-Crying', 'Boring', 'Happy-Tears', 'Mad'],
-  },
   thoughts: {
     type: String,
     required: true,

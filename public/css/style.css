@@ -362,3 +362,19 @@ a {
 
 
 
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+
+
+

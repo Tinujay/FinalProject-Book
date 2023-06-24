@@ -24,7 +24,8 @@ const bookSchema = new mongoose.Schema({
         type: String,
         enum: ['Currently Reading', 'Read', 'TBR'],
         required: true,
-    }
+    },
+    reviews: [{type: mongoose.Schema.Types.ObjectId, ref:'Review'}]
 });
 
 const Book = mongoose.model('Book', bookSchema)
