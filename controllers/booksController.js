@@ -161,5 +161,17 @@ router.delete('/:id', (req, res) => {
   });
 
 
+
+//DELETE - deletes specific review
+router.delete('/:id/reviews/:reviewId', (req, res) => {
+    db.Review.findByIdAndDelete(req.params.reviewId)
+      .then(() => {
+        res.redirect(`/books/${req.params.id}`)
+      })
+      .catch(error => {
+        console.log(error);
+        res.render('error404')
+      });
+  })
    
 module.exports = router

@@ -2,7 +2,7 @@ const React = require('react');
 const Def = require('../default');
 
 function BookDetails(props) {
-  const { book } = props;
+  const { book, review } = props;
 
   const getStarRating = (rating) => {
     const filledStars = Math.floor(rating);
@@ -106,12 +106,24 @@ function BookDetails(props) {
             <img src={review.bookBoardImage} alt="Book Board" />
           )}
           </div>
+
+          <form
+                  method="POST"
+                  action={`/books/${book.id}/reviews/${review._id}?_method=DELETE`}
+                >
+                  <button type="submit" className="btn btn-danger">
+                    Delete Review
+                  </button>
+                </form>
         </li>
       ))}
     </ul>
   ) : (
     <p>No reviews available.</p>
   )}
+
+
+
 </div>
 
 <br></br>
