@@ -15,4 +15,5 @@ mongoose.connect(process.env.MONGO_URI, {
 
 module.exports.Book = require('./books')
 module.exports.Review = require('./reviews')
+module.exports.User = require('./user')
 

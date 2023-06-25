@@ -64,6 +64,13 @@ function BookDetails(props) {
               <br></br>
               <br></br>
               <a href={`/books/${book.id}/review`} className="btn btn-primary review-button">Write Review</a>
+              <br></br>
+              <br></br>
+              <form method="POST" action={`/books/${book.id}?_method=DELETE`}>
+                  <button type="submit" className="delete-button">
+                    Delete
+                  </button>
+              </form>
             </div>
           </div>
 

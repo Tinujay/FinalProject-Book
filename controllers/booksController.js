@@ -2,6 +2,7 @@ const router = require('express').Router()
 const db = require('../models')
 
 
+
 //GET - retreives all the new books you added in database in MongoDB and renders on readingdiary/profile
 router.get('/', (req, res) => {
     db.Book.find()
@@ -143,4 +144,22 @@ router.put('/:id', (req, res) => {
   });
   
 
+
+
+ //DELETE - a specific book
+router.delete('/:id', (req, res) => {
+    const bookId = req.params.id;
+  
+    db.Book.findByIdAndDelete(bookId)
+      .then(() => {
+        res.redirect('/books'); 
+      })
+      .catch((err) => {
+        console.log(err);
+        res.render('error404'); 
+      });
+  });
+
+
+   
 module.exports = router

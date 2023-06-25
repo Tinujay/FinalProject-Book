@@ -6,6 +6,8 @@ const app = express()
 
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 
 //Express settings / Middleware 
