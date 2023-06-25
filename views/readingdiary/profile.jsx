@@ -1,4 +1,4 @@
-const { constrainedMemory } = require('process');
+
 const React = require('react');
 const Def = require('../default');
 
@@ -62,6 +62,8 @@ function Profile(props) {
                     src={book.image || '/images/defaultbook.jpg'}
                     alt={book.title}
                   />
+               
+
                 </a>
               ))}
             </div>

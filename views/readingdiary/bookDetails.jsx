@@ -4,6 +4,25 @@ const Def = require('../default');
 function BookDetails(props) {
   const { book } = props;
 
+  const getStarRating = (rating) => {
+    const filledStars = Math.floor(rating);
+    const stars = [];
+
+    for (let i = 0; i < 5; i++) {
+      if (i < filledStars) {
+        stars.push(<span key={i} className="star filled-star">&#9733;</span>);
+      } else {
+        stars.push(<span key={i} className="star">&#9734;</span>);
+      }
+    }
+
+    return (
+      <div className="star-rating">
+        {stars}
+      </div>
+    );
+  };
+
   return (
     <Def>
       
@@ -39,6 +58,7 @@ function BookDetails(props) {
               <h2 className="author">By: {book.author}</h2>
               <p className="genre"><b>Genre:</b> {book.genre}</p>
               <p className="plot"><b>Plot:</b> {book.plot}</p>
+             
               <br></br>
               <a href={`/books/${book.id}/edit`} className="btn btn-primary edit-button">Edit Book</a>
               <br></br>
@@ -49,27 +69,45 @@ function BookDetails(props) {
 
         </div>
 
+
         <div className="review-section">
-            <h2>Reviews</h2>
-            {book.reviews.length > 0 ? (
-              <ul className="review-list">
-                {book.reviews.map((review) => (
-                  <li key={review._id} className="review-item">
-                    <p>Rating: {review.rating}</p>
-                    <p>Thoughts: {review.thoughts}</p>
-                    <p>Start Date: {review.startDate.toLocaleDateString()}</p>
-                    <p>End Date: {review.endDate.toLocaleDateString()}</p>
-                    <p>Favorite Quotes: {review.favoriteQuotes.join(', ')}</p>
-                    {review.bookBoardImage && (
-                      <img src={review.bookBoardImage} alt="Book Board" />
-                    )}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>No reviews available.</p>
-            )}
+  {book.reviews.length > 0 ? (
+    <ul className="review-list">
+      {book.reviews.map((review) => (
+        <li key={review._id} className="review-item">
+          <h2 className="book-review">Book Review</h2>
+          <div className="review-rating">
+                    <p><b>Rating:</b></p>
+                    {getStarRating(review.rating)}
           </div>
+          <div className="review-dates">
+          <p><b>Start Date:</b> {review.startDate ? review.startDate.toLocaleDateString() : ''}</p>
+            <p><b>End Date:</b> {review.endDate ? review.endDate.toLocaleDateString() : ''}</p>
+          </div>
+          <div className="review-thoughts">
+            <p><b>Thoughts:</b></p>
+            <p>{review.thoughts}</p>
+          </div>
+          <div className="review-quotes">
+            <p><b>Favorite Quotes:</b></p> 
+            <p>{review.favoriteQuotes.join(', ')}</p>
+          </div>
+         
+          <p><b>Book Board:</b></p>
+          <div className="review-book-board">
+          {review.bookBoardImage && (
+            <img src={review.bookBoardImage} alt="Book Board" />
+          )}
+          </div>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p>No reviews available.</p>
+  )}
+</div>
+
+<br></br>
 
 
 

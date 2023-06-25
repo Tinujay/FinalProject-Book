@@ -292,6 +292,7 @@ a {
 /*book details */
 .details-page {
   background-color: #f0f0f0;
+  height: 100vh;
 }
 
 .book-details {
@@ -300,7 +301,7 @@ a {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 10px;
   padding: 5px;
   background-color: aliceblue;
@@ -359,22 +360,74 @@ a {
 
 
 
-
-
-
-
-
-.checkbox-container {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
+.star-rating {
+  display: inline-block;
+  font-size: 24px;
+  color: gold;
 }
 
 
 
+.filled-star {
+  color: gold;
+}
+
+.review-rating {
+  margin: 0;
+  padding: 0
+}
+
+
+
+
+
+
+
+
+/*book details - review section */
+.review-section {
+  width: 80%;
+  height: 100%;
+  border: 2px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.book-review {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.review-list {
+  list-style-type: none;
+}
+
+.review-dates {
+  margin-bottom: 40px;
+}
+
+.review-thoughts {
+  width: 50%;
+  padding: 3px;
+  float: left;
+}
+
+.review-quotes {
+  width: 50%;
+  padding: 3px;
+  float: left;
+}
+
+.review-book-board {
+  text-align: right;
+}
+
+.review-book-board img {
+  max-width: 250px; 
+  margin-right: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 

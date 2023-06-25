@@ -8,10 +8,6 @@ const reviewSchema = new mongoose.Schema({
   endDate: {
     type: Date,
   },
-  format: {
-    type: String,
-    enum: ['Book', 'E-book', 'Audiobook'],
-  },
   rating: {
     type: Number,
     min: 1,

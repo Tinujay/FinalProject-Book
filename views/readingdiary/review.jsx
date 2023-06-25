@@ -39,23 +39,6 @@ function Review({ bookId }) {
                 <input className="form-control" type="date" id="endDate" name="endDate"/>
             </div>
             <div className="form-group">
-                <label htmlFor="format">Format:</label>
-                    <div className="checkbox-container">
-                        <label className="checkbox-label" htmlFor="bookFormat">
-                            <input type="checkbox" id="bookFormat" name="format" value="Book" />
-                            <span className="checkbox-icon">Book</span>
-                        </label>
-                        <label className="checkbox-label" htmlFor="eBookFormat">
-                            <input type="checkbox" id="eBookFormat" name="format" value="E-book" />
-                            <span className="checkbox-icon">E-book</span>
-                        </label>
-                        <label className="checkbox-label" htmlFor="audiobookFormat">
-                            <input type="checkbox" id="audiobookFormat" name="format" value="Audiobook" />
-                            <span className="checkbox-icon">Audiobook</span>
-                        </label>
-                    </div>
-            </div>
-            <div className="form-group">
                 <label htmlFor="rating">Rating:</label>
                     <select className="form-control" id="rating" name="rating" required>
                         <option value="">Select a rating</option>
