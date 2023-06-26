@@ -1,5 +1,5 @@
 # FinalProject-Book
-The Book Review App is a web application designed for book lovers to add, review and keep track of their books. It provides a persinal platform for users to organize their bookshelf. 
+My Book Universe - A web application designed for book lovers to add, review and keep track of their books and progress. It provides a personal platform for users to organize their bookshelf. 
 
 The inspiration for this project was to create a tool that allows users to manage their reading habits and maintain a comprehensive record of the books they have read. 
 
