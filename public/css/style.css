@@ -242,8 +242,8 @@ body{
   padding: 20px;
   background-color: rgba(211, 211, 211, 0.8);
   margin-bottom: 10px;
- 
 }
+
 
 .book-card {
   width: 200px;
@@ -290,10 +290,7 @@ a {
 
 
 /*book details */
-.details-page {
-  background-color: #f0f0f0;
-  height: 100vh;
-}
+
 
 .book-details {
   text-align: center;
@@ -313,6 +310,9 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  background-color: rgba(232, 233, 232, 0.8);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  padding: 20px;
 }
 
 .image-container {
@@ -378,7 +378,7 @@ a {
 }
 
 .delete-button {
-  background-color: rgb(37, 36, 36);
+  background-color: rgb(163, 66, 66);
   color: white;
   border: none;
   padding: 6px 10px;
@@ -388,7 +388,7 @@ a {
 }
 
 .delete-button:hover {
-  background-color: rgb(168, 57, 57);
+  background-color: rgb(255, 11, 11);
 }
 
 
@@ -398,12 +398,14 @@ a {
 
 
 /*book details - review section */
+
+
 .review-section {
   width: 80%;
-  height: 100%;
+  min-height: 100vh;
   border: 2px solid #ccc;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #eff0ef;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
 }
@@ -434,7 +436,7 @@ a {
 }
 
 .review-book-board {
-  text-align: right;
+  text-align: center;
 }
 
 .review-book-board img {
@@ -442,6 +444,7 @@ a {
   margin-right: 20px;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 .btn-danger {
@@ -452,8 +455,18 @@ a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 10px;
+   margin-top: 60px;
+   
+ 
+    
   }
   
   .btn-danger:hover {
     background-color: rgb(168, 57, 57);
+  }
+
+
+  .editpage h1 {
+    text-align: center;
+    color: white;
   }

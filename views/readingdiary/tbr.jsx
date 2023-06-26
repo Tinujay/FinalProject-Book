@@ -2,20 +2,19 @@ const React = require('react');
 const Def = require('../default');
 
 function TBR(props) {
-    const {books} = props;
-
-    const totalTBRBooks = books.length;
+  const {books} = props;
+  const totalTBRBooks = books.length;
 
   return (
     <Def>
-  
-      <main style={{
-        backgroundImage: "url(/images/tbr1.jpg)", 
-        width: "100vw", 
-        height: "100vh",
-        backgroundSize: "contain",
-        backgroundRepeat: "repeat",
-      }}>
+      <main 
+        style={{
+          backgroundImage: "url(/images/tbr1.jpg)", 
+          width: "100vw", 
+          height: "100vh",
+          backgroundSize: "contain",
+          backgroundRepeat: "repeat",
+        }}>
         
       <nav className="navbar">
         <ul className="navbar-list">
@@ -33,21 +32,22 @@ function TBR(props) {
       
       <br></br>
 
-        <h1 className="tbr-title">Upcoming Reads: ({totalTBRBooks})</h1>
-        <div className='tbr-list'>
-            {books.map((book) => (
-                <div key={book._id} className="tbr-book">
-                  <a href={`/books/${book._id}`}>
-                    <h2>{book.title}</h2>
-                    <p>By: {book.author}</p>
-                    <img
-                        src={book.image || '/images/defaultbook.jpg'}
-                        alt={book.title}
-                    />
-                  </a>
-                </div>
-            ))}
+      <h1 className="tbr-title">Upcoming Reads: ({totalTBRBooks})</h1>
+
+      <div className='tbr-list'>
+        {books.map((book) => (
+         <div key={book._id} className="tbr-book">
+            <a href={`/books/${book._id}`}>
+              <h2>{book.title}</h2>
+              <p>By: {book.author}</p>
+              <img
+                src={book.image || '/images/defaultbook.jpg'}
+                alt={book.title}
+              />
+            </a>
         </div>
+        ))}
+      </div>
 
       </main>
 

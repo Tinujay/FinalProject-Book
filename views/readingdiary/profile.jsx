@@ -36,10 +36,10 @@ function Profile(props) {
         </ul>
       </nav>
 
-        <div className="bookshelf">
+      <div className="bookshelf">
 
-          <div className="shelf-section">
-            <h2 className="profile-section-title">Currently Reading ({totalCurrentlyReading}) </h2>
+        <div className="shelf-section">
+          <h2 className="profile-section-title">Currently Reading ({totalCurrentlyReading}) </h2>
             <div className="bookshelf-books">
               {currentlyReading.map((book) => (
                 <a key={book._id} href={`/books/${book._id}`} className="book-card">
@@ -52,10 +52,10 @@ function Profile(props) {
                 </a>
               ))}
             </div>
-          </div>
+        </div>
 
-          <div className="shelf-section">
-            <h2 className="profile-section-title">Read ({totalReadBooks}) </h2>
+        <div className="shelf-section">
+          <h2 className="profile-section-title">Read ({totalReadBooks}) </h2>
             <div className="bookshelf-books">
               {readBooks.map((book) => (
                 <a key={book._id} href={`/books/${book._id}`} className="book-card">
@@ -65,16 +65,14 @@ function Profile(props) {
                     src={book.image || '/images/defaultbook.jpg'}
                     alt={book.title}
                   />
-               
-
                 </a>
               ))}
             </div>
-          </div>
-
         </div>
 
-      </main>
+      </div>
+
+     </main>
     </Def>
   );
 }

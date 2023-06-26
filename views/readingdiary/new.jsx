@@ -4,14 +4,14 @@ const Def = require('../default');
 function newBook () {
     return (
         <Def>
-            
-            <main style={{
-                backgroundImage: "url(/images/addbook1.jpg)", 
-                width: "100%", 
-                height: "100%",
-                backgroundRepeat: "repeat",
-                backgroundSize: "contain",
-            }}>
+            <main 
+                style={{
+                    backgroundImage: "url(/images/addbook1.jpg)", 
+                    width: "100%", 
+                    height: "100%",
+                    backgroundRepeat: "repeat",
+                    backgroundSize: "contain",
+                }}>
             
                 <nav className="navbar">
                     <ul className="navbar-list">
