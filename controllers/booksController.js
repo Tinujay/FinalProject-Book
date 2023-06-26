@@ -70,11 +70,10 @@ router.get('/:id', (req, res) => {
     .populate('reviews')
       .then((book) => {
         if (!book) {
-          // If the book is not found, you can handle it accordingly
+          
           return res.status(404).render('error404');
         }
   
-        // Render the 'readingdiary/bookDetails' view with the retrieved book data
         res.render('readingdiary/bookDetails', { book });
       })
       .catch((err) => {
@@ -99,7 +98,7 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-//GET - movie-review (form) route
+//GET - book-review (form) route
 router.get('/:id/review', (req, res) => {
     const bookId = req.params.id;
     res.render('readingdiary/review', { bookId });
@@ -113,7 +112,7 @@ router.post('/:id', (req, res) => {
   db.Book.findById(bookId) 
   .then(book => {
     if (!book) {
-        // If the book is not found, handle the error
+        
         return res.status(404).render('error404');
       }
 
@@ -132,7 +131,8 @@ router.post('/:id', (req, res) => {
 });
 
 
-//PUT - saves changes in database and redirects to book detail page
+
+//PUT - saves book changes in database and redirects to book detail page
 router.put('/:id', (req, res) => {
     const { title, author, image, genre, plot, status } = req.body;
     db.Book.findByIdAndUpdate(req.params.id, { title, author, image, genre, plot, status })
@@ -143,8 +143,6 @@ router.put('/:id', (req, res) => {
       });
   });
   
-
-
 
  //DELETE - a specific book
 router.delete('/:id', (req, res) => {
@@ -174,4 +172,7 @@ router.delete('/:id/reviews/:reviewId', (req, res) => {
       });
   })
    
+
+
+  
 module.exports = router
