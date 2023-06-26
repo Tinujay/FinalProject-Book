@@ -4,6 +4,8 @@ const Def = require('../default');
 function TBR(props) {
     const {books} = props;
 
+    const totalTBRBooks = books.length;
+
   return (
     <Def>
   
@@ -31,7 +33,7 @@ function TBR(props) {
       
       <br></br>
 
-        <h1 className="tbr-title">Upcoming Reads:</h1>
+        <h1 className="tbr-title">Upcoming Reads: ({totalTBRBooks})</h1>
         <div className='tbr-list'>
             {books.map((book) => (
                 <div key={book._id} className="tbr-book">

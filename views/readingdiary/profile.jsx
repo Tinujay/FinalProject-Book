@@ -8,6 +8,9 @@ function Profile(props) {
   const currentlyReading = books.filter((book) => book.status === 'Currently Reading');
   const readBooks = books.filter((book) => book.status === 'Read');
 
+  const totalCurrentlyReading = currentlyReading.length;
+  const totalReadBooks = readBooks.length;
+
   return (
     <Def>
       <main className="profile-page" 
@@ -36,7 +39,7 @@ function Profile(props) {
         <div className="bookshelf">
 
           <div className="shelf-section">
-            <h2 className="profile-section-title">Currently Reading</h2>
+            <h2 className="profile-section-title">Currently Reading ({totalCurrentlyReading}) </h2>
             <div className="bookshelf-books">
               {currentlyReading.map((book) => (
                 <a key={book._id} href={`/books/${book._id}`} className="book-card">
@@ -52,7 +55,7 @@ function Profile(props) {
           </div>
 
           <div className="shelf-section">
-            <h2 className="profile-section-title">Read</h2>
+            <h2 className="profile-section-title">Read ({totalReadBooks}) </h2>
             <div className="bookshelf-books">
               {readBooks.map((book) => (
                 <a key={book._id} href={`/books/${book._id}`} className="book-card">

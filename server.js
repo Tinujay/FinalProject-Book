@@ -6,6 +6,8 @@ const app = express()
 
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+
+//Aunthentication 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -19,7 +21,7 @@ app.use(methodOverride('_method'))
 
 
 //Controllers & Routes 
-app.use('/books', require('./controllers/booksController')) //whenever there is a request for a URL that starts with /books, it should use the moviesController to handle the request.
+app.use('/books', require('./controllers/booksController')) //whenever there is a request for a URL that starts with /books, it should use the booksController.js to handle the request.
 
 
 app.get('/', (req, res) => {

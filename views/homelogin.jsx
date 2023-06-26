@@ -15,8 +15,8 @@ function HomeLogin () {
         >
       
         <div className="title">
-            <h1 className="login-title">Reading Diary 📕 </h1>
-            <p className="login-subtitle">Welcome! Login or Sign Up to log your books, write reviews and keep track of your reading journey. </p>
+            <h1 className="login-title">My Book Universe 📕 </h1>
+            <p className="login-subtitle">Discover a world of reading! Dive into your books, write book reviews after you've finished, and simply track your reading progress.</p>
         </div>
 
         <div className="login-signup-section">
@@ -58,7 +58,7 @@ function HomeLogin () {
                 </div>
         </div>
 
-      </main>
+        </main>
     </Def>
   );
 };
